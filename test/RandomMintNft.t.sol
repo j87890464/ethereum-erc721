@@ -14,7 +14,8 @@ contract RandomMintNftTest is Test {
     string public unrevealedTokenURI;
 
     function setUp() public {
-        sepoliaFork = vm.createFork("https://eth-sepolia.g.alchemy.com/v2/dsjALVugZwNUUDVJim7ZLE61WAMpk-7J");
+        string memory sepoliaUrl = vm.rpcUrl("sepolia");
+        sepoliaFork = vm.createFork(sepoliaUrl);
         vrfRequestID = 2434958413822996221281407648824320680268504669445970203830331396250695750904;
         tokenURI = "ipfs://bafybeiffsp2cje3lsyagfn6yzpdjfm7n62xmrygnjpu2pq2hczptqqjdnm";
         unrevealedTokenURI = "ipfs://Qmdc24K1yFzysWTYUHfFbYbNywuggHX1ijqcTCqS4Q35Zz";

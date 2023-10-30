@@ -8,6 +8,9 @@
 $ forge build
 ```
 
+### Setting
+Set RPC_SEPOLIA environment variable in .env file. It must be done before test RandomMintNftTest.
+
 ### Test
 
 Test entire weth test cases
